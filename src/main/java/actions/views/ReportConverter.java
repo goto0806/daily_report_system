@@ -82,4 +82,15 @@ public class ReportConverter {
 
     }
 
+    public static void copyModelToView(Report r, ReportView rv) {
+        rv.setId(r.getId());
+        rv.setEmployee(EmployeeConverter.toView(r.getEmployee()));
+        rv.setReportDate(r.getReportDate());
+        rv.setTitle(r.getTitle());
+        rv.setCreatedAt(r.getCreatedAt());
+        rv.setUpdatedAt(r.getUpdatedAt());
+        rv.setLikeCount(r.getLikeCount());
+
+    }
+
 }
